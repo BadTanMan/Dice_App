@@ -1,0 +1,6 @@
+﻿  stdafx.cpp
+  DICE!.cpp
+e:\my programs\dice!\dice!\dice!\dice!.cpp(51): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\my programs\dice!\dice!\dice!\dice!.cpp(56): warning C4553: '==': operator has no effect; did you intend '='?
+  DICE!.vcxproj -> E:\My Programs\DICE!\DICE!\Debug\DICE!.exe
+  DICE!.vcxproj -> E:\My Programs\DICE!\DICE!\Debug\DICE!.pdb (Full PDB)
