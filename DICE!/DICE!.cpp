@@ -48,85 +48,83 @@ int main()
 {	
 	system("color 0a");
 	string user_i;
+	int num;
+	int rollcount = 0;
 	srand(std::time(0));
 	greetings();
 
 	while (!quit)
 	{
-		quit == false;
 		cout << endl;
-		cout << "Enter dice type: ";
+		cout << "\t\t\tRollcount: " << rollcount << endl; //display total roll count
+		cout << "Enter dice: ";
 		cin >> user_i;
-		transform(user_i.begin(), user_i.end(), user_i.begin(), ::toupper);
 		cout << endl;
-		if (user_i == "D4")
+		transform(user_i.begin(), user_i.end(), user_i.begin(), ::toupper);//convert input to uppercase for both lower and uppercase input!
+		rollcount++;//adds +1 to the total rollcount of the session
+		if (user_i == "D4") //D4 roll
 		{
 			cout << "Rolling..." << endl;
 			cout << endl;
-			int num = rand() % 4 + 1;
-			cout << num << endl;
+			num = rand() % 4 + 1;
+			cout << "D4: " << num << endl;
 		}
-
-		else if (user_i == "D6")
+		else if (user_i == "D6") //d6 roll
 		{
 			cout << "Rolling..." << endl;
 			cout << endl;
-			int num = rand() % 6 + 1;
-			cout << num << endl;
+			num = rand() % 6 + 1;
+			cout << "D6: " << num << endl;
 		}
-
-		else if (user_i == "D8")
+		else if (user_i == "D8") //D8 roll
 		{
 			cout << "Rolling..." << endl;
 			cout << endl;
-			int num = rand() % 8 + 1;
-			cout << num << endl;
+			num = rand() % 8 + 1;
+			cout << "D8: " << num << endl;
 		}
-
-		else if (user_i == "D10")
+		else if (user_i == "D10") //d10 roll
 		{
 			cout << "Rolling..." << endl;
 			cout << endl;
-			int num = rand() % 10 + 1;
-			cout << num << endl;
+			num = rand() % 10 + 1;
+			cout << "D10: " << num << endl;
 		}
-
-		else if (user_i == "D100")
+		else if (user_i == "D100") //d100 roll
 		{
 			cout << "Rolling..." << endl;
 			cout << endl;
-			int num = rand() % 100 + 1;
-			cout << num << endl;
+			num = rand() % 100 + 1;
+			cout << "D100: " << num << endl;
 		}
-
-		else if (user_i == "D12")
+		else if (user_i == "D12") ///d12 roll
 		{
 			cout << "Rolling..." << endl;
 			cout << endl;
-			int num = rand() % 12 + 1;
-			cout << num << endl;
+			num = rand() % 12 + 1;
+			cout << "D12: " << num << endl;
+			num = NULL;
 		}
-
-		else if (user_i == "D20")
+		else if (user_i == "D20") //d20 roll
 		{
 			cout << "Rolling..." << endl;
 			cout << endl;
-			int num = rand() % 20 + 1;
-			cout << num << endl;
+			num = rand() % 20 + 1;
+			cout << "D20: " << num << endl;
 		}
-
-		else if (user_i == "EXIT")
+		else if (user_i == "EXIT") //exit program;
 		{
 			cout << endl;
 			quit = true;
 			exit(0);
 		}
-
-		else
+		else	//catches non string input
 		{
+			cout << endl;
+			rollcount--;	//counterbalanaces rollcount++ so player cannot get negative rolls!
 			cout << "Nope!" << endl;
 		}
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }
 
