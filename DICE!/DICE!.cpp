@@ -58,7 +58,7 @@ int main()
 		cout << endl;
 		cout << "\t\t\tRollcount: " << rollcount << endl; //display total roll count
 		cout << "Enter dice: ";
-		cin >> user_i;
+		getline(cin, user_i);
 		cout << endl;
 		transform(user_i.begin(), user_i.end(), user_i.begin(), ::toupper);//convert input to uppercase for both lower and uppercase input!
 		rollcount++;//adds +1 to the total rollcount of the session
